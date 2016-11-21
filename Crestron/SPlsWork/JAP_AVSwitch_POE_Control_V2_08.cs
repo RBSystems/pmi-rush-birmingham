@@ -417,8 +417,6 @@ public override object FunctionMain (  object __obj__ )
 
 public override void LogosSplusInitialize()
 {
-    SocketInfo __socketinfo__ = new SocketInfo( 1, this );
-    InitialParametersClass.ResolveHostName = __socketinfo__.ResolveHostName;
     _SplusNVRAM = new SplusNVRAM( this );
     
     SWITCH_ONE_ON = new InOutArray<DigitalInput>( 52, this );
