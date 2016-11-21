@@ -1,0 +1,164 @@
+[BEGIN]
+  Version=1
+[END]
+[BEGIN]
+  ObjTp=FSgntr
+  Sgntr=UserSPlus
+  RelVrs=1
+  IntStrVrs=1
+  SPlusVrs=4.03.16
+  CrossCplrVrs=1.3
+[END]
+[BEGIN]
+  ObjTp=Hd
+[END]
+[BEGIN]
+  ObjTp=Symbol
+  Exclusions=1,19,20,21,88,89,167,168,179,213,214,215,216,217,225,226,248,249,266,267,310,718,756,854,
+  Exclusions_CDS=5
+  Inclusions_CDS=6
+  Name=JAD SOIP Code v2_11
+  SmplCName=JAD_TxRxComms_v2_11.usp
+  Code=1
+  SysRev5=4.000
+  SMWRev=2.02.05
+  InputCue1=SOIP_ENABLE
+  InputSigType1=Digital
+  InputCue2=START_MODULE
+  InputSigType2=Digital
+  InputCue3=DEBUG
+  InputSigType3=Digital
+  InputList2Cue1=TX
+  InputList2SigType1=Serial
+  InputList2Cue2=CRESTRON_ID
+  InputList2SigType2=Serial
+  InputList2Cue3=CONSOLE_CMD
+  InputList2SigType3=Serial
+  InputList2Cue4=AUDIO_DELAY
+  InputList2SigType4=Analog
+  InputList2Cue5=TEAR_ADJUST
+  InputList2SigType5=Analog
+  OutputList2Cue1=RX
+  OutputList2SigType1=Serial
+  OutputList2Cue2=Version$
+  OutputList2SigType2=Serial
+  ParamCue1=[Reference Name]
+  ParamCue2=IP_ADDRESS
+  ParamSigType2=String
+  ParamCue3=SOIP_MODE
+  ParamSigType3=String
+  ParamCue4=BAUD_RATE
+  ParamSigType4=String
+  ParamCue5=DATA_BIT
+  ParamSigType5=String
+  ParamCue6=PARITY
+  ParamSigType6=String
+  ParamCue7=STOP_BIT
+  ParamSigType7=String
+  ParamCue8=LICENCE_KEY
+  ParamSigType8=String
+  MinVariableInputs=3
+  MaxVariableInputs=3
+  MinVariableInputsList2=5
+  MaxVariableInputsList2=5
+  MinVariableOutputs=0
+  MaxVariableOutputs=0
+  MinVariableOutputsList2=2
+  MaxVariableOutputsList2=2
+  MinVariableParams=7
+  MaxVariableParams=7
+  Expand=expand_separately
+  Expand2=expand_separately
+  ProgramTree=Logic
+  SymbolTree=32
+  Hint=
+  PdfHelp=
+  HelpID= 
+  Render=4
+  Smpl-C=16
+  CompilerCode=-48
+  CompilerParamCode=27
+  CompilerParamCode5=14
+  NumFixedParams=1
+  Pp1=1
+  Pp2=2
+  Pp3=3
+  Pp4=4
+  Pp5=5
+  Pp6=6
+  Pp7=7
+  Pp8=8
+  MPp=8
+  NVStorage=10
+  ParamSigType1=String
+  SmplCInputCue1=o#
+  SmplCOutputCue1=i#
+  SmplCInputList2Cue1=an#
+  SmplCOutputList2Cue1=ai#
+  SPlus2CompiledName=S2_JAD_TxRxComms_v2_11
+  SymJam=NonExclusive
+  FileName=JAD_TxRxComms_v2_11.ush
+  SIMPLPlusModuleEncoding=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=1
+  Tp=1
+  NoS=False
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=2
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=3
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=4
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=5
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=6
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=7
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=8
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]
