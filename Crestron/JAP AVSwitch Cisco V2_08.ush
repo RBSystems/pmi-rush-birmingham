@@ -1,0 +1,156 @@
+[BEGIN]
+  Version=1
+[END]
+[BEGIN]
+  ObjTp=FSgntr
+  Sgntr=UserSPlus
+  RelVrs=1
+  IntStrVrs=1
+  SPlusVrs=4.02.26
+  CrossCplrVrs=1.3
+[END]
+[BEGIN]
+  ObjTp=Hd
+[END]
+[BEGIN]
+  ObjTp=Symbol
+  Exclusions=1,19,20,21,88,89,167,168,179,213,214,215,216,217,225,226,248,249,266,267,310,718,756,854,
+  Exclusions_CDS=5
+  Inclusions_CDS=6
+  Name=JAP A/V Switch (Cisco) Code V2_08
+  SmplCName=JAP AVSwitch Cisco V2_08.usp
+  Code=1
+  SysRev5=4.000
+  SMWRev=2.02.05
+  InputCue1=__TRIGGER_SEND_NEXT_CMD
+  InputSigType1=Digital
+  InputCue2=__TRIGGER_HEARTBEAT
+  InputSigType2=Digital
+  InputCue3=__TRIGGER_PROCESS_SOCKET_RECEIVE
+  InputSigType3=Digital
+  InputCue4=Refresh_status
+  InputSigType4=Digital
+  InputCue5=Start_Module
+  InputSigType5=Digital
+  InputCue6=Send_save
+  InputSigType6=Digital
+  OutputCue1=__TRIGGER_SEND_NEXT_CMD_OUT
+  OutputSigType1=Digital
+  OutputCue2=__TRIGGER_START_HEARTBEAT_OUT
+  OutputSigType2=Digital
+  OutputCue3=__SOCKET_RECEIVE_BUSY
+  OutputSigType3=Digital
+  OutputCue4=rebootingInProgress
+  OutputSigType4=Digital
+  InputList2Cue1=Favoutite_Cmd
+  InputList2SigType1=Serial
+  InputList2Cue2=POE_Cmd
+  InputList2SigType2=Serial
+  InputList2Cue3=DebugEnable
+  InputList2SigType3=Serial
+  InputList2Cue4=Crestron_MAC
+  InputList2SigType4=Serial
+  InputList2Cue5=Output[#]
+  InputList2SigType5=Analog
+  OutputList2Cue1=OperationFB$
+  OutputList2SigType1=Serial
+  OutputList2Cue2=CrestronID$
+  OutputList2SigType2=Serial
+  OutputList2Cue3=Version$
+  OutputList2SigType3=Serial
+  OutputList2Cue4=ErrorMsg$
+  OutputList2SigType4=Serial
+  OutputList2Cue5=NumofOutputs
+  OutputList2SigType5=Analog
+  OutputList2Cue6=NumofInputs
+  OutputList2SigType6=Analog
+  OutputList2Cue7=outputFB[#]
+  OutputList2SigType7=Analog
+  ParamCue1=[Reference Name]
+  ParamCue2=p_SwitchIP
+  ParamSigType2=String
+  ParamCue3=p_SwitchUserName
+  ParamSigType3=String
+  ParamCue4=p_SwitchPassword
+  ParamSigType4=String
+  ParamCue5=p_SwitchLicenceKey
+  ParamSigType5=String
+  MinVariableInputs=6
+  MaxVariableInputs=6
+  MinVariableInputsList2=5
+  MaxVariableInputsList2=408
+  MinVariableOutputs=4
+  MaxVariableOutputs=4
+  MinVariableOutputsList2=7
+  MaxVariableOutputsList2=410
+  MinVariableParams=4
+  MaxVariableParams=4
+  Expand=expand_separately
+  Expand2=expand_separately
+  ProgramTree=Logic
+  SymbolTree=32
+  Hint=
+  PdfHelp=
+  HelpID= 
+  Render=4
+  Smpl-C=16
+  CompilerCode=-48
+  CompilerParamCode=27
+  CompilerParamCode5=14
+  NumFixedParams=1
+  Pp1=1
+  Pp2=2
+  Pp3=3
+  Pp4=4
+  Pp5=5
+  MPp=5
+  NVStorage=10
+  ParamSigType1=String
+  SmplCInputCue1=o#
+  SmplCOutputCue1=i#
+  SmplCInputList2Cue1=an#
+  SmplCOutputList2Cue1=ai#
+  SPlus2CompiledName=S2_JAP_AVSwitch_Cisco_V2_08
+  SymJam=NonExclusive
+  FileName=JAP AVSwitch Cisco V2_08.ush
+  SIMPLPlusModuleEncoding=0
+  SPStackSize=8192
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=1
+  Tp=1
+  NoS=False
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=2
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=3
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=4
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=5
+  Tp=1
+  HD=False
+  NoS=False
+  VVS=0
+[END]

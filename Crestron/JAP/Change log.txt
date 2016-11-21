@@ -1,0 +1,159 @@
+***********************************************************
+
+           Just Add Drivers        Change Log
+
+ControlSystem:          Crestron	
+MatrixDriver            v2.05
+ConsoleOverIP (CLIP)    v2.05
+Crestron 		4.007.0004
+Cisco 			1.2.7.76
+
+***********************************************************
+***********************************************************
+***********************************************************
+
+History
+
+***********************************************************
+
+Date                     2014-11-09
+MatrixDriver             v2.06
+ConsoleOverIP (CLIP)     v2.05
+
+Fixed problem with Symbol names in Release process
+- caused when multiple versions of module are installed
+
+***********************************************************
+
+Date                     2014-10-16
+MatrixDriver             v2.05
+ConsoleOverIP (CLIP)     v2.05
+
+Delayed querying VER on startup to determine processor type
+
+***********************************************************
+
+Date                     2014-06-05
+MatrixDriver             v2.3
+ConsoleOverIP (CLIP)     v2.5
+
+CLIP improved connection handling 
+
+*********************************************************** 
+
+***********************************************************
+
+Date                     2014-06-04
+MatrixDriver             v2.3
+ConsoleOverIP (CLIP)     v2.4
+
+Changed waits in simpl+ to make code faster 
+
+*********************************************************** 
+
+***********************************************************
+
+Date                     2014-05-31
+MatrixDriver             v2.02
+ConsoleOverIP (CLIP)     v2.4
+Improved TxRxComms connection handling
+***********************************************************
+
+***********************************************************
+
+Date                     2013-19
+MatrixDriver             v2.02
+ConsoleOverIP (CLIP)     v2.3
+operation is now make string permenent in the modular
+
+***********************************************************
+***********************************************************
+
+Date                     2013-19
+MatrixDriver             v2.01
+ConsoleOverIP (CLIP)     v2.3
+added soip modes
+
+***********************************************************
+***********************************************************
+
+Date                     2013-10-30
+MatrixDriver             v2.01
+ConsoleOverIP (CLIP)     v2.0
+
+Added SerialPort disable (Baudrate parameter)
+astparam dump checks config and only reconfigures if necessary
+
+***********************************************************
+***********************************************************
+
+Date                     2013-10-14
+MatrixDriver             v2.01
+ConsoleOverIP (CLIP)     v1.7
+
+Supports all new features for SG500/SG500X stack
+(with firmware supporting 1-8 units in a stack)
+
+-          Range switching
+-          Presets save / recall
+-          POE control
+-          Save Config
+
+
+***********************************************************
+***********************************************************
+
+Date                     2013-06-25
+MatrixDriver             v1.13
+ConsoleOverIP (CLIP)     v1.7
+
+fixes licensing problem on older Crestron firmware
+
+***********************************************************
+***********************************************************
+
+Date                     2013-06-10
+MatrixDriver             v1.12
+ConsoleOverIP (CLIP)     v1.6
+
+allow "control" as vlan 2 id name 
+handles RX receive better
+
+***********************************************************
+***********************************************************
+
+Date                     2013-06-04 
+MatrixDriver             v1.11
+ConsoleOverIP (CLIP)     v1.6
+
+Fixes problem with CLIP – it was non-functional
+
+
+***********************************************************
+
+Date                     2013-05-29  
+MatrixDriver             v1.11
+ConsoleOverIP (CLIP)     v1.5
+
+handles bad prompt when sending interface range
+
+****************************************************************
+****************************************************************
+
+Date                     2013-05-08   
+MatrixDriver             v1.9
+ConsoleOverIP (CLIP)     v1.4
+
+Fixed problem with licensing on 3-series processors
+Fixed message handling on 3-series processor (differing behaviour of string find)
+
+***********************************************************
+***********************************************************
+
+Date                     2013-04-08   
+MatrixDriver             v1.8
+ConsoleOverIP (CLIP)     v1.2
+
+Added changed log
+
+***********************************************************

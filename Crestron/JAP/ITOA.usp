@@ -1,0 +1,39 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+  Copyright (c) 2011 Janus Technology Limited
+  
+  Simple module to convert an analog output to a string representation.
+*/
+
+/*******************************************************************************************
+  Compiler Directives
+*******************************************************************************************/
+
+#default_nonvolatile
+#enable_stack_checking
+#enable_trace
+/*
+#help_begin
+  Simple module to convert an analog output to a string representation.
+  When an analog input aValue changes, the corresponding sValue output has
+  the string representation of the value (in decimal).
+#help_end
+*/
+
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+*******************************************************************************************/
+analog_input aValue[250]; 
+string_output sValue[250];
+
+
+change aValue
+{
+  integer i; 
+  
+  i = getlastmodifiedarrayindex();
+  sValue[i] = itoa( aValue[i] );   
+}

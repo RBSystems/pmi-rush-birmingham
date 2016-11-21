@@ -1,0 +1,409 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x80000000         0x00500000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00000000                __DYNAMIC=0x0
+                0x00400000                PROVIDE (__stack, 0x400000)
+                0x00000000                PROVIDE (hardware_init_hook, 0x0)
+                0x00000000                PROVIDE (_hardware_init_hook, 0x0)
+                0x00000000                PROVIDE (software_init_hook, 0x0)
+                0x00000000                PROVIDE (_software_init_hook, 0x0)
+
+.text           0x80000000    0x527a0
+ *(.text)
+ .text          0x80000000      0x284 S2_ITOA.o
+                0x80000000                S2_ITOAEventHandler00000
+                0x80000206                S2_ITOA_main
+                0x80000150                S2_ITOA_EventHandler
+ .text          0x80000284     0xdb5a S2_JAD_TxRxComms_v2_10.o
+                0x8000dcb2                S2_JAD_TxRxComms_v2_10EventHandler0000C
+                0x80009b88                S2_JAD_TxRxComms_v2_10EventHandler00000
+                0x8000d87c                S2_JAD_TxRxComms_v2_10__SPLS_TMPVAR__WAITLABEL_0__
+                0x8000a952                S2_JAD_TxRxComms_v2_10EventHandler00004
+                0x8000b1b8                S2_JAD_TxRxComms_v2_10EventHandler00006
+                0x8000d872                S2_JAD_TxRxComms_v2_10__9_Destructor
+                0x8000d9f8                S2_JAD_TxRxComms_v2_10EventHandler00003
+                0x8000a666                S2_JAD_TxRxComms_v2_10EventHandler00001
+                0x8000ce7e                S2_JAD_TxRxComms_v2_10_main
+                0x8000c37e                S2_JAD_TxRxComms_v2_10EventHandler0000E
+                0x8000d8ba                S2_JAD_TxRxComms_v2_10__SPLS_TMPVAR__WAITLABEL_1__
+                0x8000dc08                S2_JAD_TxRxComms_v2_10EventHandler00009
+                0x8000c814                S2_JAD_TxRxComms_v2_10EventHandler0000F
+                0x8000c01a                S2_JAD_TxRxComms_v2_10EventHandler0000B
+                0x8000cbf0                S2_JAD_TxRxComms_v2_10_EventHandler
+                0x8000d936                S2_JAD_TxRxComms_v2_10__SPLS_TMPVAR__WAITLABEL_4__
+                0x8000b82c                S2_JAD_TxRxComms_v2_10EventHandler0000A
+                0x8000b364                S2_JAD_TxRxComms_v2_10EventHandler00007
+                0x8000d81a                S2_JAD_TxRxComms_v2_10__9_Constructor
+                0x80005e60                S2_JAD_TxRxComms_v2_10__SPLS_TMPVAR__WAITLABEL_3__
+                0x8000d974                S2_JAD_TxRxComms_v2_10EventHandler00002
+                0x8000b590                S2_JAD_TxRxComms_v2_10EventHandler00008
+                0x8000d8f8                S2_JAD_TxRxComms_v2_10__SPLS_TMPVAR__WAITLABEL_2__
+                0x8000c186                S2_JAD_TxRxComms_v2_10EventHandler0000D
+                0x8000dac6                S2_JAD_TxRxComms_v2_10EventHandler00005
+ *fill*         0x8000ddde        0x2
+ .text          0x8000dde0     0x24de S2_JAP_AVSwitch_POE_Control_V2_08.o
+                0x8000dfd0                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler00001
+                0x8000f330                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler0000B
+                0x8000e980                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler00006
+                0x8000e5a0                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler00004
+                0x8000f710                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler0000D
+                0x8000f140                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler0000A
+                0x8000ef50                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler00009
+                0x8000dde0                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler00000
+                0x8000eb70                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler00007
+                0x8000e1c0                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler00002
+                0x8000ff88                S2_JAP_AVSwitch_POE_Control_V2_08_EventHandler
+                0x800100f2                S2_JAP_AVSwitch_POE_Control_V2_08_main
+                0x8000f900                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler0000E
+                0x8000ed60                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler00008
+                0x8000f520                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler0000C
+                0x8000faf0                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler0000F
+                0x8000e790                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler00005
+                0x8000e3b0                S2_JAP_AVSwitch_POE_Control_V2_08EventHandler00003
+ *fill*         0x800102be        0x2
+ .text          0x800102c0     0xa222 S2_JAP_AVSwitch_Favourite_Switching_V2_08.o
+                0x8001a238                S2_JAP_AVSwitch_Favourite_Switching_V2_08EventHandler00003
+                0x800197b8                S2_JAP_AVSwitch_Favourite_Switching_V2_08EventHandler00002
+                0x8001a1e4                S2_JAP_AVSwitch_Favourite_Switching_V2_08__0_Destructor
+                0x8001a3d2                S2_JAP_AVSwitch_Favourite_Switching_V2_08EventHandler00005
+                0x8001a132                S2_JAP_AVSwitch_Favourite_Switching_V2_08__0_Constructor
+                0x80019614                S2_JAP_AVSwitch_Favourite_Switching_V2_08EventHandler00001
+                0x8001a1ee                S2_JAP_AVSwitch_Favourite_Switching_V2_08__SPLS_TMPVAR__WAITLABEL_0__
+                0x80019fea                S2_JAP_AVSwitch_Favourite_Switching_V2_08_main
+                0x8001a2c0                S2_JAP_AVSwitch_Favourite_Switching_V2_08EventHandler00004
+                0x8001946c                S2_JAP_AVSwitch_Favourite_Switching_V2_08EventHandler00000
+                0x80019f14                S2_JAP_AVSwitch_Favourite_Switching_V2_08_EventHandler
+ *fill*         0x8001a4e2        0x2
+ .text          0x8001a4e4    0x2e09c S2_JAP_AVSwitch_Cisco_V2_08.o
+                0x80046baa                S2_JAP_AVSwitch_Cisco_V2_08EventHandler0000A
+                0x80047fdc                S2_JAP_AVSwitch_Cisco_V2_08WAIT_FOR_RX_SEND
+                0x80046498                S2_JAP_AVSwitch_Cisco_V2_08EventHandler00008
+                0x80030f5a                S2_JAP_AVSwitch_Cisco_V2_08__SPLS_TMPVAR__WAITLABEL_0__
+                0x80047e16                S2_JAP_AVSwitch_Cisco_V2_08__0_Constructor
+                0x8004821c                S2_JAP_AVSwitch_Cisco_V2_08EventHandler00003
+                0x80045d52                S2_JAP_AVSwitch_Cisco_V2_08EventHandler00001
+                0x80047f5e                S2_JAP_AVSwitch_Cisco_V2_08__72_Destructor
+                0x80047ee6                S2_JAP_AVSwitch_Cisco_V2_08__63_Constructor
+                0x80047fd2                S2_JAP_AVSwitch_Cisco_V2_08__78_Destructor
+                0x8004801a                S2_JAP_AVSwitch_Cisco_V2_08__SPLS_TMPVAR__WAITLABEL_1__
+                0x80047edc                S2_JAP_AVSwitch_Cisco_V2_08__41_Destructor
+                0x80048470                S2_JAP_AVSwitch_Cisco_V2_08EventHandler0000B
+                0x800484ac                S2_JAP_AVSwitch_Cisco_V2_08EventHandler0000C
+                0x8004816e                S2_JAP_AVSwitch_Cisco_V2_08EventHandler00000
+                0x800462d2                S2_JAP_AVSwitch_Cisco_V2_08EventHandler00007
+                0x80047f68                S2_JAP_AVSwitch_Cisco_V2_08__78_Constructor
+                0x8004839c                S2_JAP_AVSwitch_Cisco_V2_08EventHandler00006
+                0x800480f0                S2_JAP_AVSwitch_Cisco_V2_08__SPLS_TMPVAR__WAITLABEL_4__
+                0x80048066                S2_JAP_AVSwitch_Cisco_V2_08__SPLS_TMPVAR__WAITLABEL_2__
+                0x8004712e                S2_JAP_AVSwitch_Cisco_V2_08_EventHandler
+                0x8004730c                S2_JAP_AVSwitch_Cisco_V2_08_main
+                0x80047ed2                S2_JAP_AVSwitch_Cisco_V2_08__41_Constructor
+                0x800484e8                S2_JAP_AVSwitch_Cisco_V2_08EventHandler0000D
+                0x80048544                S2_JAP_AVSwitch_Cisco_V2_08EventHandler0000E
+                0x80048262                S2_JAP_AVSwitch_Cisco_V2_08EventHandler00004
+                0x80046012                S2_JAP_AVSwitch_Cisco_V2_08EventHandler00002
+                0x8004699a                S2_JAP_AVSwitch_Cisco_V2_08EventHandler00009
+                0x80047f54                S2_JAP_AVSwitch_Cisco_V2_08__72_Constructor
+                0x80047ec8                S2_JAP_AVSwitch_Cisco_V2_08__0_Destructor
+                0x800480b2                S2_JAP_AVSwitch_Cisco_V2_08__SPLS_TMPVAR__WAITLABEL_3__
+                0x80047f4a                S2_JAP_AVSwitch_Cisco_V2_08__63_Destructor
+                0x800482a8                S2_JAP_AVSwitch_Cisco_V2_08EventHandler00005
+ .text          0x80048580     0x5836 library.o
+                0x8004c76c                RotateRightLong
+                0x8004cd7a                IsSystem
+                0x8004c6d0                Seed
+                0x80049fc8                Remove
+                0x8004c34c                Ltoa
+                0x8004c078                Atoi
+                0x8004b3e0                InitRampInfoArray
+                0x8004cb26                Right
+                0x8004db56                LockInputSema
+                0x8004c5fa                Mod
+                0x8004c7e2                Getc
+                0x8004c52e                SMuldiv
+                0x8004cd5c                IsHidden
+                0x8004c412                Min
+                0x8004d96a                hextosi
+                0x8004cf00                WriteIntegerArray
+                0x8004d476                GetSignedIntArrayElementPtr
+                0x8004bd9a                CheckStructArray
+                0x8004d97e                hextosl
+                0x8004d086                WriteSignedIntegerArray
+                0x8004ba62                InitStringParamArray
+                0x8004ad34                ReadSignedLongIntegerArray
+                0x80049c56                GatherToDelimiter
+                0x8004b886                InitStringArray
+                0x8004c3ec                Max
+                0x8004cdb6                IsReadOnly
+                0x8004c4f6                SMax
+                0x80049dfa                GatherByLength
+                0x8004c286                Chr
+                0x8004ced8                ReadSignedLongInteger
+                0x8004c304                Itohex
+                0x8004bd0c                GetStructArrayElement
+                0x8004c000                UNS_SetByte
+                0x8004cafa                ReverseFindi
+                0x8004b1dc                ReadStringArray
+                0x8004d286                GetIntArrayElementPtr
+                0x8004c936                Lower
+                0x8004c6ec                RotateLeft
+                0x8004da9e                ResizeIfAutogrow
+                0x8004b50c                CheckInputArray
+                0x80048aee                ResizeStringArray
+                0x8004c218                Atosl
+                0x8004c040                High
+                0x8004c69c                Rnd
+                0x8004c5be                UMod
+                0x8004c742                RotateLeftLong
+                0x8004dbca                FindNumericChar
+                0x8004d6ce                CheckIOArrayBounds2
+                0x8004cd14                MakeProgramFilename
+                0x8004c512                SMin
+                0x8004c86a                Left
+                0x8004c7ac                CheckBufferThreshold
+                0x8004ce90                ReadSignedInteger
+                0x8004c06a                LowWord
+                0x80048580                Bit
+                0x8004ce40                ReadLongInteger
+                0x8004be7e                Byte
+                0x8004d37e                GetLongArrayElementPtr
+                0x8004cacc                ReverseFind
+                0x8004cd2a                GetSeries
+                0x8004dc96                InitTcpServer
+                0x8004c91e                Len
+                0x8004d79e                InitializeRampInfoInternal
+                0x8004c438                Divide
+                0x8004c184                Atol
+                0x8004cd20                GetModelNumber
+                0x8004d666                CheckIOArrayBounds
+                0x8004b566                CheckStringInputArray
+                0x8004d148                WriteSignedLongIntegerArray
+                0x8004bc56                GetStringArrayElement
+                0x8004c390                Ltohex
+                0x8004c2bc                Itoa
+                0x8004c716                RotateRight
+                0x8004a2b6                InternalReverseFind
+                0x8004ce20                WriteLongInteger
+                0x8004b78a                InitDynamicStringStruct
+                0x8004b67c                SetStringArray
+                0x8004ab12                ReadSignedIntegerArray
+                0x8004b5c0                SetOutputArray
+                0x8004cdd0                WriteInteger
+                0x8004bbea                InitStructDynamicArray
+                0x8004a540                SetString
+                0x8004c636                Random
+                0x8004ce68                WriteSignedInteger
+                0x800487e4                Find
+                0x8004cd34                GetProgramNumber
+                0x8004ca0a                Mid
+                0x8004dc08                InitTcpClient
+                0x800496d2                ResizeStructArray
+                0x8004d56e                GetSignedLongArrayElementPtr
+                0x8004d990                hextol
+                0x8004af56                ReadString
+                0x8004b91c                InitDynamicStringArray
+                0x8004da76                UpperChar
+                0x8004c114                Atosi
+                0x8004cdf8                ReadInteger
+                0x8004c4aa                Muldiv
+                0x8004b62e                SetStringOutputArray
+                0x8004d20c                WriteString
+                0x80049146                ResizeIntegerArray
+                0x8004b4d4                InitInOutArray
+                0x8004bb2a                InitNvramStringArray
+                0x8004c3d4                Abs
+                0x8004c57a                SDivide
+                0x8004a6d0                ReadIntegerArray
+                0x80048690                CompareStrings
+                0x8004da4e                LowerChar
+                0x8004dd26                InitUdpSocket
+                0x8004c794                ClearBuffer
+                0x8004cbe2                Upper
+                0x8004bbc6                InitStructArray
+                0x8004ccb8                MakeLower
+                0x8004cd98                IsVolume
+                0x8004a122                RemoveByLength
+                0x8004be16                CheckStringOutputArrayIndex
+                0x8004cfc2                WriteLongIntegerArray
+                0x8004d84a                InitRampInfoStructArray
+                0x8004c05c                HighWord
+                0x80048958                ResizeString
+                0x8004cd3e                IsDirectory
+                0x8004a8f0                ReadLongIntegerArray
+                0x8004c04e                Low
+                0x80049afc                Gather
+                0x8004cce6                MakeUpper
+                0x8004b74c                InitStringStruct
+                0x8004d736                CheckStringArrayBounds
+                0x8004c47c                CheckDenominator
+                0x8004d952                hextoi
+                0x8004b074                WriteStringArray
+                0x8004bf3e                SetByte
+                0x8004d7f4                InitializeRampInfo
+                0x8004db90                UnLockInputSema
+                0x8004ceb8                WriteSignedLongInteger
+                0x8004b83e                InitNvramStringStruct
+ *fill*         0x8004ddb6        0xa
+                0x8004ddc0                .=ALIGN(0x10)
+ *(.eh_frame)
+                0x8004ddc0                .=ALIGN(0x10)
+ *(.gnu.linkonce.t.*)
+                0x8004ddc0                .=ALIGN(0x4)
+                0x8004ddc0                __CTOR_LIST__=.
+                0x8004ddc0                ___CTOR_LIST__=.
+                0x8004ddc0        0x4 LONG 0x0 (((__CTOR_END__-__CTOR_LIST__)/0x4)-0x2)
+ *(.ctors)
+                0x8004ddc4        0x4 LONG 0x0
+                0x8004ddc8                __CTOR_END__=.
+                0x8004ddc8                __DTOR_LIST__=.
+                0x8004ddc8                ___DTOR_LIST__=.
+                0x8004ddc8        0x4 LONG 0x0 (((__DTOR_END__-__DTOR_LIST__)/0x4)-0x2)
+ *(.dtors)
+                0x8004ddcc        0x4 LONG 0x0
+                0x8004ddd0                __DTOR_END__=.
+ *(.rodata)
+ .rodata        0x8004ddd0      0x282 S2_ITOA.o
+ .rodata        0x8004e052      0xdb7 S2_JAD_TxRxComms_v2_10.o
+ .rodata        0x8004ee09      0x407 S2_JAP_AVSwitch_POE_Control_V2_08.o
+ .rodata        0x8004f210      0x970 S2_JAP_AVSwitch_Favourite_Switching_V2_08.o
+ .rodata        0x8004fb80     0x1fb2 S2_JAP_AVSwitch_Cisco_V2_08.o
+ .rodata        0x80051b32      0xc54 library.o
+ *(.gcc_except_table)
+                0x80052786                .=ALIGN(0x2)
+                0x80052786                __INIT_SECTION__=.
+                0x80052786        0x4 LONG 0x4e560000
+ *(.init)
+                0x8005278a        0x2 SHORT 0x4e5e
+                0x8005278c        0x2 SHORT 0x4e75
+                0x8005278e                __FINI_SECTION__=.
+                0x8005278e        0x4 LONG 0x4e560000
+ *(.fini)
+                0x80052792        0x2 SHORT 0x4e5e
+                0x80052794        0x2 SHORT 0x4e75
+ *(.lit)
+ *fill*         0x80052796        0xa
+                0x800527a0                .=ALIGN(0x10)
+                0x800527a0                _etext=.
+                0x800527a0                etext=.
+
+.data           0x800527a0        0x0
+                0x800527a0                copy_start=.
+ *(.shdata)
+ *(.data)
+ *(.gnu.linkonce.d.*)
+                0x800527a0                .=ALIGN(0x10)
+                0x800527a0                _edata=.
+                0x800527a0                copy_end=.
+
+.got
+ *(.got.plt)
+ *(.got)
+
+EntryList       0x800527a0      0x550
+ *(EntryList)
+ EntryList      0x800527a0      0x110 S2_ITOA.o
+                0x800527a0                S2_ITOA_Entry
+ EntryList      0x800528b0      0x110 S2_JAD_TxRxComms_v2_10.o
+                0x800528b0                S2_JAD_TxRxComms_v2_10_Entry
+ EntryList      0x800529c0      0x110 S2_JAP_AVSwitch_POE_Control_V2_08.o
+                0x800529c0                S2_JAP_AVSwitch_POE_Control_V2_08_Entry
+ EntryList      0x80052ad0      0x110 S2_JAP_AVSwitch_Favourite_Switching_V2_08.o
+                0x80052ad0                S2_JAP_AVSwitch_Favourite_Switching_V2_08_Entry
+ EntryList      0x80052be0      0x110 S2_JAP_AVSwitch_Cisco_V2_08.o
+                0x80052be0                S2_JAP_AVSwitch_Cisco_V2_08_Entry
+                0x80052cf0                .=ALIGN(0x4)
+
+FunctionList    0x80052cf0        0x4
+ *(FunctionList)
+ FunctionList   0x80052cf0        0x4 globals.o
+                0x80052cf0                g_pFunctions
+                0x80052cf4                .=ALIGN(0x4)
+
+.bss            0x80052cf4        0x0
+                0x80052cf4                .=ALIGN(0x4)
+                0x80052cf4                __bss_start=.
+ *(.shbss)
+ *(.bss)
+ *(COMMON)
+                0x80052cf8                _end=ALIGN(0x8)
+                0x80052cf8                __end=_end
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+LOAD S2_ITOA.o
+LOAD S2_JAD_TxRxComms_v2_10.o
+LOAD S2_JAP_AVSwitch_POE_Control_V2_08.o
+LOAD S2_JAP_AVSwitch_Favourite_Switching_V2_08.o
+LOAD S2_JAP_AVSwitch_Cisco_V2_08.o
+LOAD globals.o
+LOAD library.o
+OUTPUT(_S2_JAP_AVSwitch_Cisco_Demo_V2_08.spl elf32-m68k)
+
+.comment        0x80052cf4      0x10a
+ .comment       0x80052cf4       0x26 S2_ITOA.o
+ .comment       0x80052d1a       0x26 S2_JAD_TxRxComms_v2_10.o
+ .comment       0x80052d40       0x26 S2_JAP_AVSwitch_POE_Control_V2_08.o
+ .comment       0x80052d66       0x26 S2_JAP_AVSwitch_Favourite_Switching_V2_08.o
+ .comment       0x80052d8c       0x26 S2_JAP_AVSwitch_Cisco_V2_08.o
+ .comment       0x80052db2       0x26 globals.o
+ .comment       0x80052dd8       0x26 library.o
