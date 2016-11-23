@@ -22,7 +22,7 @@
   SmplCName=JAP_AVSwitch_Favourite_Switching.usp
   Code=1
   SysRev5=3.137
-  SMWRev=2.02.00
+  SMWRev=2.02.05
   InputCue1=Select_All
   InputSigType1=Digital
   InputCue2=Clear_All

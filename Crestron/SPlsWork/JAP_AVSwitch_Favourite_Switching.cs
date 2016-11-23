@@ -2150,7 +2150,7 @@ object CREATE_FAVOURITE_OnPush_4 ( Object __EventInfo__ )
             __context__.SourceCodeLine = 32;
             FAVOURITEFILEERROR  .Value = (ushort) ( 1 ) ; 
             __context__.SourceCodeLine = 32;
-            CreateWait ( "__SPLS_TMPVAR__WAITLABEL_12__" , 500 , __SPLS_TMPVAR__WAITLABEL_12___Callback ) ;
+            CreateWait ( "__SPLS_TMPVAR__WAITLABEL_14__" , 500 , __SPLS_TMPVAR__WAITLABEL_14___Callback ) ;
             } 
         
         else 
@@ -2168,7 +2168,7 @@ object CREATE_FAVOURITE_OnPush_4 ( Object __EventInfo__ )
     
 }
 
-public void __SPLS_TMPVAR__WAITLABEL_12___CallbackFn( object stateInfo )
+public void __SPLS_TMPVAR__WAITLABEL_14___CallbackFn( object stateInfo )
 {
 
     try
@@ -2233,8 +2233,6 @@ public override object FunctionMain (  object __obj__ )
 
 public override void LogosSplusInitialize()
 {
-    SocketInfo __socketinfo__ = new SocketInfo( 1, this );
-    InitialParametersClass.ResolveHostName = __socketinfo__.ResolveHostName;
     _SplusNVRAM = new SplusNVRAM( this );
     _49  = new ushort[ 405 ];
     
@@ -2304,7 +2302,7 @@ public override void LogosSplusInitialize()
     MULTI_SWITCH_CMD = new Crestron.Logos.SplusObjects.StringOutput( MULTI_SWITCH_CMD__AnalogSerialOutput__, this );
     m_StringOutputList.Add( MULTI_SWITCH_CMD__AnalogSerialOutput__, MULTI_SWITCH_CMD );
     
-    __SPLS_TMPVAR__WAITLABEL_12___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_12___CallbackFn );
+    __SPLS_TMPVAR__WAITLABEL_14___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_14___CallbackFn );
     
     SELECT_ALL.OnDigitalPush.Add( new InputChangeHandlerWrapper( SELECT_ALL_OnPush_0, false ) );
     CLEAR_ALL.OnDigitalPush.Add( new InputChangeHandlerWrapper( CLEAR_ALL_OnPush_1, false ) );
@@ -2336,7 +2334,7 @@ public override void LogosSimplSharpInitialize()
 public UserModuleClass_JAP_AVSWITCH_FAVOURITE_SWITCHING ( string InstanceName, string ReferenceID, Crestron.Logos.SplusObjects.CrestronStringEncoding nEncodingType ) : base( InstanceName, ReferenceID, nEncodingType ) {}
 
 
-private WaitFunction __SPLS_TMPVAR__WAITLABEL_12___Callback;
+private WaitFunction __SPLS_TMPVAR__WAITLABEL_14___Callback;
 
 
 const uint PROCESSORTYPE__AnalogSerialInput__ = 0;

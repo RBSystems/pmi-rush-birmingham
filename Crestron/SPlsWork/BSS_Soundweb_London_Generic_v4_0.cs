@@ -74,7 +74,7 @@ object SUBSCRIBE__DOLLAR___OnPush_2 ( Object __EventInfo__ )
         SplusExecutionContext __context__ = SplusThreadStartCode(__SignalEventArg__);
         
         __context__.SourceCodeLine = 64;
-        CreateWait ( "__SPLS_TMPVAR__WAITLABEL_19__" , 20 , __SPLS_TMPVAR__WAITLABEL_19___Callback ) ;
+        CreateWait ( "__SPLS_TMPVAR__WAITLABEL_13__" , 20 , __SPLS_TMPVAR__WAITLABEL_13___Callback ) ;
         
         
     }
@@ -84,7 +84,7 @@ object SUBSCRIBE__DOLLAR___OnPush_2 ( Object __EventInfo__ )
     
 }
 
-public void __SPLS_TMPVAR__WAITLABEL_19___CallbackFn( object stateInfo )
+public void __SPLS_TMPVAR__WAITLABEL_13___CallbackFn( object stateInfo )
 {
 
     try
@@ -200,8 +200,6 @@ public override object FunctionMain (  object __obj__ )
 
 public override void LogosSplusInitialize()
 {
-    SocketInfo __socketinfo__ = new SocketInfo( 1, this );
-    InitialParametersClass.ResolveHostName = __socketinfo__.ResolveHostName;
     _SplusNVRAM = new SplusNVRAM( this );
     TEMPSTRING  = new CrestronString( Crestron.Logos.SplusObjects.CrestronStringEncoding.eEncodingASCII, 40, this );
     STATEVARIABLE  = new CrestronString( Crestron.Logos.SplusObjects.CrestronStringEncoding.eEncodingASCII, 2, this );
@@ -227,7 +225,7 @@ public override void LogosSplusInitialize()
     RX__DOLLAR__ = new Crestron.Logos.SplusObjects.BufferInput( RX__DOLLAR____AnalogSerialInput__, 400, this );
     m_StringInputList.Add( RX__DOLLAR____AnalogSerialInput__, RX__DOLLAR__ );
     
-    __SPLS_TMPVAR__WAITLABEL_19___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_19___CallbackFn );
+    __SPLS_TMPVAR__WAITLABEL_13___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_13___CallbackFn );
     
     STATEVARIABLE__DOLLAR__.OnAnalogChange.Add( new InputChangeHandlerWrapper( STATEVARIABLE__DOLLAR___OnChange_0, false ) );
     VALUE__DOLLAR__.OnAnalogChange.Add( new InputChangeHandlerWrapper( VALUE__DOLLAR___OnChange_1, false ) );
@@ -250,7 +248,7 @@ public override void LogosSimplSharpInitialize()
 public UserModuleClass_BSS_SOUNDWEB_LONDON_GENERIC_V4_0 ( string InstanceName, string ReferenceID, Crestron.Logos.SplusObjects.CrestronStringEncoding nEncodingType ) : base( InstanceName, ReferenceID, nEncodingType ) {}
 
 
-private WaitFunction __SPLS_TMPVAR__WAITLABEL_19___Callback;
+private WaitFunction __SPLS_TMPVAR__WAITLABEL_13___Callback;
 
 
 const uint VALUE__DOLLAR____AnalogSerialInput__ = 0;

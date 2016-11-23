@@ -3934,7 +3934,7 @@ namespace UserModule_JAP_AVSWITCH_LUXUL_V1_04
         if ( Functions.TestForTrue  ( ( Functions.BoolToInt (_154._95 == "NULL STRING"))  ) ) 
             { 
             __context__.SourceCodeLine = 53;
-            CreateWait ( "__SPLS_TMPVAR__WAITLABEL_6__" , 10 , __SPLS_TMPVAR__WAITLABEL_6___Callback ) ;
+            CreateWait ( "__SPLS_TMPVAR__WAITLABEL_15__" , 10 , __SPLS_TMPVAR__WAITLABEL_15___Callback ) ;
             } 
         
         else 
@@ -3946,7 +3946,7 @@ namespace UserModule_JAP_AVSWITCH_LUXUL_V1_04
         
         }
         
-    public void __SPLS_TMPVAR__WAITLABEL_6___CallbackFn( object stateInfo )
+    public void __SPLS_TMPVAR__WAITLABEL_15___CallbackFn( object stateInfo )
     {
     
         try
@@ -4827,11 +4827,11 @@ private void _166 (  SplusExecutionContext __context__ )
     { 
     
     __context__.SourceCodeLine = 65;
-    CreateWait ( "__SPLS_TMPVAR__WAITLABEL_7__" , 200 , __SPLS_TMPVAR__WAITLABEL_7___Callback ) ;
+    CreateWait ( "__SPLS_TMPVAR__WAITLABEL_16__" , 200 , __SPLS_TMPVAR__WAITLABEL_16___Callback ) ;
     
     }
     
-public void __SPLS_TMPVAR__WAITLABEL_7___CallbackFn( object stateInfo )
+public void __SPLS_TMPVAR__WAITLABEL_16___CallbackFn( object stateInfo )
 {
 
     try
@@ -6180,7 +6180,7 @@ private void _183 (  SplusExecutionContext __context__, CrestronString _185 )
             __context__.SourceCodeLine = 82;
             ERRORMSG__DOLLAR__  .UpdateValue ( "Bad Switch configuration\r\n\r\n Please run JAD CONFIG Again"  ) ; 
             __context__.SourceCodeLine = 82;
-            CreateWait ( "__SPLS_TMPVAR__WAITLABEL_8__" , 200 , __SPLS_TMPVAR__WAITLABEL_8___Callback ) ;
+            CreateWait ( "__SPLS_TMPVAR__WAITLABEL_17__" , 200 , __SPLS_TMPVAR__WAITLABEL_17___Callback ) ;
             } 
         
         } 
@@ -6188,7 +6188,7 @@ private void _183 (  SplusExecutionContext __context__, CrestronString _185 )
     
     }
     
-public void __SPLS_TMPVAR__WAITLABEL_8___CallbackFn( object stateInfo )
+public void __SPLS_TMPVAR__WAITLABEL_17___CallbackFn( object stateInfo )
 {
 
     try
@@ -6415,7 +6415,7 @@ private void _186 (  SplusExecutionContext __context__, ushort _188 , CrestronSt
             else if  ( Functions.TestForTrue  (  ( __SPLS_TMPVAR__SWTCH_7__ == ( 18) ) ) ) 
                 { 
                 __context__.SourceCodeLine = 85;
-                CreateWait ( "__SPLS_TMPVAR__WAITLABEL_9__" , 2000 , __SPLS_TMPVAR__WAITLABEL_9___Callback ) ;
+                CreateWait ( "__SPLS_TMPVAR__WAITLABEL_18__" , 2000 , __SPLS_TMPVAR__WAITLABEL_18___Callback ) ;
                 } 
             
             else if  ( Functions.TestForTrue  (  ( __SPLS_TMPVAR__SWTCH_7__ == ( 19) ) ) ) 
@@ -6432,7 +6432,7 @@ private void _186 (  SplusExecutionContext __context__, ushort _188 , CrestronSt
     
     }
     
-public void __SPLS_TMPVAR__WAITLABEL_9___CallbackFn( object stateInfo )
+public void __SPLS_TMPVAR__WAITLABEL_18___CallbackFn( object stateInfo )
 {
 
     try
@@ -6594,7 +6594,7 @@ private ushort _189 (  SplusExecutionContext __context__ )
             __context__.SourceCodeLine = 87;
             _195 = (ushort) ( _102._97 ) ; 
             __context__.SourceCodeLine = 87;
-            CreateWait ( "__SPLS_TMPVAR__WAITLABEL_10__" , 10 , __SPLS_TMPVAR__WAITLABEL_10___Callback ) ;
+            CreateWait ( "__SPLS_TMPVAR__WAITLABEL_19__" , 10 , __SPLS_TMPVAR__WAITLABEL_19___Callback ) ;
             } 
         
         else 
@@ -6669,7 +6669,7 @@ private ushort _189 (  SplusExecutionContext __context__ )
     
     }
     
-public void __SPLS_TMPVAR__WAITLABEL_10___CallbackFn( object stateInfo )
+public void __SPLS_TMPVAR__WAITLABEL_19___CallbackFn( object stateInfo )
 {
 
     try
@@ -7478,8 +7478,6 @@ public override object FunctionMain (  object __obj__ )
 
 public override void LogosSplusInitialize()
 {
-    SocketInfo __socketinfo__ = new SocketInfo( 1, this );
-    InitialParametersClass.ResolveHostName = __socketinfo__.ResolveHostName;
     _SplusNVRAM = new SplusNVRAM( this );
     _110  = new ushort[ 81 ];
     _117  = new ushort[ 9,53 ];
@@ -7605,12 +7603,12 @@ public override void LogosSplusInitialize()
     m_ParameterList.Add( P_SWITCHLICENCEKEY__Parameter__, P_SWITCHLICENCEKEY );
     
     WAIT_FOR_RX_SEND_Callback = new WaitFunction( WAIT_FOR_RX_SEND_CallbackFn );
-    __SPLS_TMPVAR__WAITLABEL_6___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_6___CallbackFn );
+    __SPLS_TMPVAR__WAITLABEL_15___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_15___CallbackFn );
     LICENCE_TEXT_Callback = new WaitFunction( LICENCE_TEXT_CallbackFn );
-    __SPLS_TMPVAR__WAITLABEL_7___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_7___CallbackFn );
-    __SPLS_TMPVAR__WAITLABEL_8___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_8___CallbackFn );
-    __SPLS_TMPVAR__WAITLABEL_9___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_9___CallbackFn );
-    __SPLS_TMPVAR__WAITLABEL_10___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_10___CallbackFn );
+    __SPLS_TMPVAR__WAITLABEL_16___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_16___CallbackFn );
+    __SPLS_TMPVAR__WAITLABEL_17___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_17___CallbackFn );
+    __SPLS_TMPVAR__WAITLABEL_18___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_18___CallbackFn );
+    __SPLS_TMPVAR__WAITLABEL_19___Callback = new WaitFunction( __SPLS_TMPVAR__WAITLABEL_19___CallbackFn );
     
     START_MODULE.OnDigitalPush.Add( new InputChangeHandlerWrapper( START_MODULE_OnPush_0, false ) );
     REFRESH_STATUS.OnDigitalPush.Add( new InputChangeHandlerWrapper( REFRESH_STATUS_OnPush_1, false ) );
@@ -7646,12 +7644,12 @@ public UserModuleClass_JAP_AVSWITCH_LUXUL_V1_04 ( string InstanceName, string Re
 
 
 private WaitFunction WAIT_FOR_RX_SEND_Callback;
-private WaitFunction __SPLS_TMPVAR__WAITLABEL_6___Callback;
+private WaitFunction __SPLS_TMPVAR__WAITLABEL_15___Callback;
 private WaitFunction LICENCE_TEXT_Callback;
-private WaitFunction __SPLS_TMPVAR__WAITLABEL_7___Callback;
-private WaitFunction __SPLS_TMPVAR__WAITLABEL_8___Callback;
-private WaitFunction __SPLS_TMPVAR__WAITLABEL_9___Callback;
-private WaitFunction __SPLS_TMPVAR__WAITLABEL_10___Callback;
+private WaitFunction __SPLS_TMPVAR__WAITLABEL_16___Callback;
+private WaitFunction __SPLS_TMPVAR__WAITLABEL_17___Callback;
+private WaitFunction __SPLS_TMPVAR__WAITLABEL_18___Callback;
+private WaitFunction __SPLS_TMPVAR__WAITLABEL_19___Callback;
 
 
 const uint __TRIGGER_SEND_NEXT_CMD__DigitalInput__ = 0;

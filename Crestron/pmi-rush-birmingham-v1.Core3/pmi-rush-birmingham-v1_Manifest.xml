@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='ISO-8859-1' ?>
 <File Type='Manifest' Version='7.1.0' ObjectDisplayList='4'>
-<Project FileName='pmi-rush-birmingham-v1.zip' Size='1733003' Build='20161121134946'>
+<Project FileName='pmi-rush-birmingham-v1.zip' Size='1733045' Build='20161123120619'>
 <Sources>
-<Source FileName='pmi-rush-birmingham-v1.xml' Size='538' Type='Application' Build='20161121134946' MinimumSGVersion='2.11.05.00' />
+<Source FileName='pmi-rush-birmingham-v1.xml' Size='538' Type='Application' Build='20161123120619' MinimumSGVersion='2.11.05.00' />
 </Sources>
 </Project>
 </File>
